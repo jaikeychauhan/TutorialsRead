@@ -1,30 +1,62 @@
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
+* {
+  box-sizing: border-box;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 450px}
-
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Set black background color, white text and some padding */
-footer {
-  background-color: #555;
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: left;
+  font-size: 50px;
   color: white;
-  padding: 15px;
 }
 
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 100%; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 30px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 100%; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+      width: 100%;
+      height: auto;
   }
-  .row.content {height:auto;} 
 }
