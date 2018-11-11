@@ -11,12 +11,8 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 
 const routes: Routes = [  
     {path: 'login', component: LoginComponent },
-    {path: ''
-    // ,canActivate:[AuthguardGuard]
-    ,
-     component: HomeComponent ,
-     children:
-     [
+    {path: '' ,canActivate:[AuthguardGuard],component: HomeComponent ,
+     children:[
       {path:'add-user',component:AddUserComponent},
       {path:'add-category',component:AddCategoryComponent}
      ]
