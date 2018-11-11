@@ -7,16 +7,17 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UserService} from './user.service'
 import { AuthguardGuard } from './authguard.guard';
 import { AddCategoryComponent } from './add-category/add-category.component';
-
-
 const routes: Routes = [  
     {path: 'login', component: LoginComponent },
-    {path: '' ,canActivate:[AuthguardGuard],component: HomeComponent ,
+    {path: 'dashboard' ,canActivate:[AuthguardGuard],component: HomeComponent ,
      children:[
       {path:'add-user',component:AddUserComponent},
       {path:'add-category',component:AddCategoryComponent}
+      
      ]
-  },
+    },
+    
+    
   
 ];
 

@@ -1,0 +1,11 @@
+.loginDiv
+{
+    background-color:azure;
+     height:100%;
+     text-align: center;
+     width:50%;
+     margin:auto;
+     margin-top: 10%;
+     border: 2px solid rgb(212, 210, 210);
+     border-radius: 10px
+}

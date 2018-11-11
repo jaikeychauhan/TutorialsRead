@@ -13,10 +13,7 @@ export class LoginComponent implements OnInit {
     {
 
     }
-  ngOnInit()
-  {
-
-  }
+  ngOnInit(){}
 
   loginUser(e)
   {
@@ -24,7 +21,7 @@ export class LoginComponent implements OnInit {
     var password=e.target.elements[1].value;
     if(username=="admin" && password=="admin"){
     this.userService.setUserLoggedIn();
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
     }
     return false;
   }
